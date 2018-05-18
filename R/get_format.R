@@ -2,9 +2,17 @@
 #'
 #' @param df a list or data frame
 #'
-#' @export
-#'
 #' @author Marc Choisy
+#'
+#' @examples
+#' ## retrieving the format of an Stata version of the iris data set:
+#' library(haven)
+#' path <- system.file("examples", "iris.dta", package = "haven")
+#' iris <- read_dta(path)
+#' str(iris)
+#' get_format(iris)
+#'
+#' @export
 #'
 get_format <- function(df) {
   grep("format",
